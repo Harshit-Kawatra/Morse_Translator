@@ -39,12 +39,21 @@ def decrypt(message): #morse to eng
     return decipher
 
 def main():
-      sent=str(input("Enter a string"))
-      result=encrypt(sent)
-      print('The string in morse code is',result) 
-      dec=".... .- .-. ... .... .. -"
-      res2=decrypt(dec)
-      print(res2)          
+    print("MORSE TRANSLATOR")
+    print("1.Encrypt message")
+    print("2.Decrypt message")
+    choice=input("Enter you choice ")
+    if choice=='1':
+        sent=str(input("Enter a string"))
+        result=encrypt(sent)
+        print('The string in morse code is',result) 
+    elif choice=='2':
+        dec=str(input("Enter morse code to decrypt"))
+        res2=decrypt(dec)
+        print('The decrypted message is',res2)
+    else:
+        print('Enter any one of the choice')
+                  
 
 if __name__=='__main__':
     main()
